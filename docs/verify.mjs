@@ -22,16 +22,16 @@ try{
  async function evaluate(expression){const r=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true,userGesture:true});if(r.exceptionDetails)throw new Error(r.exceptionDetails.text+' '+r.exceptionDetails.exception?.description);return r.result.value;}
  function check(name,result){checks.push({name,passed:!!result});if(!result)console.log('FAIL: '+name);}
  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
- await send('Page.navigate',{url:pathToFileURL(path.join(root,'index.html')).href});
+ await send('Page.navigate',{url:pathToFileURL(path.join(root,'dist','index.html')).href});
  await pause(3500);
- check('Page initializes',await evaluate('document.querySelectorAll(".memory-card").length===3 && document.querySelectorAll(".garden-flower").length===5'));
+ check('Page initializes',await evaluate('document.querySelectorAll(".memory-card").length===6 && document.querySelectorAll(".garden-flower").length===5'));
  check('No horizontal overflow at desktop',await evaluate('document.documentElement.scrollWidth<=innerWidth'));
  await evaluate('document.querySelector(".hero-photo").click()');
- check('Photo dialog opens',await evaluate('document.querySelector("#memory-dialog").open && document.querySelector("#dialog-count").textContent==="1 / 3"'));
+ check('Photo dialog opens',await evaluate('document.querySelector("#memory-dialog").open && document.querySelector("#dialog-count").textContent==="1 / 6"'));
  await evaluate('document.querySelector("#previous-memory").click()');
- check('Previous photo wraps',await evaluate('document.querySelector("#dialog-count").textContent==="3 / 3"'));
+ check('Previous photo wraps',await evaluate('document.querySelector("#dialog-count").textContent==="6 / 6"'));
  await evaluate('document.querySelector("#next-memory").click()');
- check('Next photo wraps',await evaluate('document.querySelector("#dialog-count").textContent==="1 / 3"'));
+ check('Next photo wraps',await evaluate('document.querySelector("#dialog-count").textContent==="1 / 6"'));
  await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});
  await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});
  await pause(100);
@@ -61,7 +61,7 @@ try{
  check('Music starts after activation',await evaluate('document.querySelector("#sound-toggle").getAttribute("aria-pressed")==="true"'));
  await evaluate('document.querySelector("#sound-toggle").click()');await pause(100);
  check('Music stops',await evaluate('document.querySelector("#sound-toggle").getAttribute("aria-pressed")==="false"'));
- const assets=await evaluate('Array.from(document.images).map(i=>({alt:i.alt,loaded:i.complete&&i.naturalWidth>0}))');
+ await evaluate("document.querySelectorAll('img').forEach(i=>i.loading='eager')"); await pause(500); const assets=await evaluate('Array.from(document.images).map(i=>({alt:i.alt,loaded:i.complete&&i.naturalWidth>0}))');
  await evaluate('document.querySelectorAll(".reveal").forEach(e=>e.classList.add("visible"));scrollTo(0,0)');
  await pause(400);
  await fs.mkdir(path.join(root,'docs'),{recursive:true});

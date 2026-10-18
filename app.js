@@ -18,7 +18,7 @@ $("#couple-names").textContent = content.names;
 $("#story-message").textContent = content.story;
 function setImage(image, memory) {
  image.classList.remove("image-unavailable");
- image.alt = memory.alt;
+ image.alt = memory.alt; image.style.objectPosition = memory.position || "50% 50%";
  image.onerror = () => { image.onerror = null; image.removeAttribute("src"); image.classList.add("image-unavailable"); image.alt = "Photo placeholder — " + memory.alt; };
  image.src = memory.image;
 }
