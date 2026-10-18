@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f5ee">
+  <meta name="description" content="A little garden of memories. A first monthsary story, made with love.">
+  <title>Our First Bloom — A month of us</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#story">Skip to our story</a>
+  <canvas id="pollen" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Our First Bloom home"><span class="brand-flower" aria-hidden="true">✳</span> our first bloom<span class="wordmark-dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="#story">Our story</a><a href="#memories">The little things</a><a href="#letter">A letter for you <span aria-hidden="true">↗</span></a></nav>
+    <button class="icon-button sound-button" id="sound-toggle" aria-pressed="false" aria-label="Play gentle background melody"><span aria-hidden="true">♫</span><span class="sound-label">Sound off</span></button>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-line"></span> ONE MONTH. A THOUSAND LITTLE MOMENTS.</p>
+        <h1 id="hero-title">Some things<br>just <em>bloom.</em><span class="title-star" aria-hidden="true">✧</span></h1>
+        <p class="hero-description">And somewhere between our first hello and all the little things, you became my favorite part of every day.</p>
+        <a class="button button-dark" href="#story" id="open-story">Step into our story <span aria-hidden="true">↗</span></a>
+        <div class="dedication"><span class="handwritten">for you, always</span><span class="dedication-line"></span><span id="couple-names">You & me</span></div>
+      </div>
+      <div class="hero-art" aria-label="A glowing pink lily beside a sample sunset keepsake">
+        <div class="art-halo"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="art-star star-one" aria-hidden="true">✧</span><span class="art-star star-two" aria-hidden="true">✦</span>
+        <span class="art-caption handwritten">a little love, in full bloom</span>
+        <div class="hero-lily lily-mount" data-flower="hero"></div>
+        <button class="polaroid hero-photo" data-memory="0" aria-label="Open the first sample memory">
+          <img id="hero-image" alt="Golden sunlight reflected on the sea" fetchpriority="high" width="500" height="620">
+          <span class="handwritten">my favorite kind of forever.</span>
+          <span class="photo-tape" aria-hidden="true"></span>
+        </button>
+        <div class="month-seal"><span>OUR FIRST</span><strong>01</strong><span>MONTH TOGETHER</span></div>
+        <span class="art-bottom-note">a new beginning, beautifully ours.</span>
+      </div>
+      <a class="scroll-note" href="#story"><span class="scroll-line"></span> A LITTLE SCROLL, A LOT OF LOVE</a>
+      <div class="hero-index">CHAPTER 01 <span> / </span> JUST THE BEGINNING</div>
+    </section>
+    <div class="love-ribbon" aria-hidden="true"><span>the way you laugh</span><i>✧</i><span>our little adventures</span><i>✧</i><span>one more minute with you</span><i>✧</i><span>all the ordinary magic</span><i>✧</i><span>the way you laugh</span></div>
+    <section class="story section-shell" id="story" aria-labelledby="story-title">
+      <div class="section-heading reveal"><p class="eyebrow">01 / HOW IT FEELS</p><h2 id="story-title">A month of us.<br><em>A world of little things.</em></h2><p>It isn’t just the big moments. It’s the quiet, ordinary ones that somehow mean everything.</p></div>
+      <div class="story-layout">
+        <div class="story-picture reveal"><button class="polaroid story-polaroid" data-memory="1"><img id="story-image" alt="A warm café moment" loading="lazy" width="600" height="640"><span class="handwritten">right here, with you.</span></button><span class="scribble handwritten">the little moments<br>are the big ones <span aria-hidden="true">↙</span></span></div>
+        <div class="story-copy reveal"><span class="mini-flower" aria-hidden="true">✳</span><h3>I didn’t know a month<br>could hold <em>so much.</em></h3><p id="story-message"></p><div class="date-line"><span class="date-dot"></span><span id="date-caption">Our first chapter, together</span></div><div class="time-keepsake"><strong id="day-count">01</strong><div><span id="day-unit">beautiful month</span><small>and so many more to come</small></div><span class="outline-heart" aria-hidden="true">♡</span></div></div>
+      </div>
+    </section>
+    <section class="memories section-shell" id="memories" aria-labelledby="memory-title">
+      <div class="memory-heading reveal"><div><p class="eyebrow">02 / THE MOMENTS WE KEEP</p><h2 id="memory-title">If memories were flowers,<br><em>I’d pick these.</em></h2></div><p>A few pieces of our story.<br>Tap a photo. Stay a little longer.</p></div>
+      <div class="memory-grid" id="memory-grid"></div>
+      <p class="sample-note" id="sample-note"><span aria-hidden="true">◇</span> A preview of your story — sample photos and words, waiting for your memories.</p>
+    </section>
+    <section class="reasons section-shell" aria-labelledby="reasons-title">
+      <div class="section-heading reveal"><p class="eyebrow">03 / JUST BECAUSE YOU’RE YOU</p><h2 id="reasons-title">Little things.<br><em>Very big feelings.</em></h2><p>Some things deserve to be said more often. Tap a note.</p></div>
+      <div class="notes-grid" id="notes-grid"></div>
+    </section>
+    <section class="letter-section section-shell" id="letter" aria-labelledby="letter-title">
+      <div class="letter-intro reveal"><p class="eyebrow">04 / FROM MY HEART TO YOURS</p><h2 id="letter-title">A few words,<br><em>just for you.</em></h2><p>For the things I don’t always know how to say out loud.</p><span class="handwritten letter-scribble">sealed with a little love ↘</span></div>
+      <div class="letter-wrap reveal"><button class="envelope" id="open-letter" aria-expanded="false" aria-controls="letter-paper"><span class="envelope-flap"></span><span class="envelope-address handwritten">To my favorite person,</span><span class="wax-seal" aria-hidden="true">♡</span><span class="envelope-prompt">TAP TO OPEN YOUR LETTER</span></button><article class="letter-paper" id="letter-paper" hidden><div class="letter-top"><span class="eyebrow">A LITTLE LOVE LETTER</span><button class="text-button" id="close-letter">Fold away <span aria-hidden="true">↗</span></button></div><h3 class="handwritten" id="letter-greeting"></h3><div id="letter-body"></div><p class="handwritten letter-signature" id="letter-signature"></p><span class="letter-flower" aria-hidden="true">✳</span></article></div>
+    </section>
+    <section class="garden" id="garden" aria-labelledby="garden-title">
+      <div class="garden-stars" aria-hidden="true"></div><div class="garden-content reveal"><p class="eyebrow">05 / THIS IS ONLY THE BEGINNING</p><h2 id="garden-title">Here’s to everything<br><em>we haven’t bloomed into yet.</em></h2><p>One month down. A whole garden of memories to grow.</p><button class="button button-light" id="bloom-button">Let our garden bloom <span aria-hidden="true">✳</span></button><p class="garden-hint" id="garden-status" aria-live="polite">Each flower holds a little memory. Tap one to find it.</p></div>
+      <div class="garden-flowers" id="garden-flowers"></div>
+      <span class="garden-ground" aria-hidden="true"></span>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#">our first bloom<span class="wordmark-dot">.</span></a><p>Made of little moments. Made with love.</p><button class="text-button" id="effects-toggle" aria-pressed="false">Reduce effects</button><a class="back-top" href="#" aria-label="Back to top">↑</a></footer>
+  <dialog id="memory-dialog" aria-labelledby="dialog-title"><button class="dialog-close icon-button" aria-label="Close memory">×</button><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div><div class="dialog-copy"><p class="eyebrow" id="dialog-date"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-navigation"><button class="text-button" id="previous-memory" aria-label="Previous memory">← Previous</button><span id="dialog-count" aria-live="polite"></span><button class="text-button" id="next-memory" aria-label="Next memory">Next →</button></div></div></dialog>
+</body>
+</html>

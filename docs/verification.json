@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "name": "Page initializes",
+      "passed": true
+    },
+    {
+      "name": "No horizontal overflow at desktop",
+      "passed": true
+    },
+    {
+      "name": "Photo dialog opens",
+      "passed": true
+    },
+    {
+      "name": "Previous photo wraps",
+      "passed": true
+    },
+    {
+      "name": "Next photo wraps",
+      "passed": true
+    },
+    {
+      "name": "Escape closes dialog and restores focus",
+      "passed": true
+    },
+    {
+      "name": "Personal note reveals",
+      "passed": true
+    },
+    {
+      "name": "Personal note closes",
+      "passed": true
+    },
+    {
+      "name": "Letter opens",
+      "passed": true
+    },
+    {
+      "name": "Letter closes with focus return",
+      "passed": true
+    },
+    {
+      "name": "Garden blooms",
+      "passed": true
+    },
+    {
+      "name": "Garden flower opens a memory",
+      "passed": true
+    },
+    {
+      "name": "Reduced effects toggle",
+      "passed": true
+    },
+    {
+      "name": "System reduced-motion preference respected",
+      "passed": true
+    },
+    {
+      "name": "Music starts after activation",
+      "passed": true
+    },
+    {
+      "name": "Music stops",
+      "passed": true
+    },
+    {
+      "name": "No horizontal overflow at 390px",
+      "passed": true
+    },
+    {
+      "name": "No horizontal overflow at 360px",
+      "passed": true
+    },
+    {
+      "name": "No horizontal overflow at 768px",
+      "passed": true
+    },
+    {
+      "name": "No browser JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "images": [
+    {
+      "alt": "Golden sun setting over a quiet ocean",
+      "loaded": true
+    },
+    {
+      "alt": "A cup of coffee in warm café light",
+      "loaded": true
+    },
+    {
+      "alt": "Golden sun setting over a quiet ocean",
+      "loaded": true
+    },
+    {
+      "alt": "A cup of coffee in warm café light",
+      "loaded": true
+    },
+    {
+      "alt": "Sunlight falling through a peaceful green woodland",
+      "loaded": true
+    },
+    {
+      "alt": "Golden sun setting over a quiet ocean",
+      "loaded": true
+    }
+  ]
+}

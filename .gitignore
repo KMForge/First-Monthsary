@@ -1,0 +1,4 @@
+.preview-profile/
+*.tar.gz
+*.tgz
+node_modules/
